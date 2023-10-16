@@ -1,12 +1,13 @@
 #include "main.h"
+
 /**
- * handleCase -  handle cases for persentage..
- *
- * Description: a function that prints listed input and check spesial cases.
- * @listedPrint: list of character need to print
- *
- * Return: number of printed digits, -1 if nothing printed.
- **/
+* percent_print: a function that prints apercent.
+*
+* Description: a function that prints listed input.
+* @listedPrint: list of character need to print
+*
+* Return: number of printed digits, -1 if nothing printed.
+**/
 int percent_print(va_list listedPrint)
 {
 }
@@ -38,7 +39,8 @@ int _printf(const char *format, ...)
 			count++;
 			x += printString(listedPrint);
 		}
-		if (format[count] == '%' && (format[count + 1] == 'd' || format[count + 1] == 'i'))
+		if (format[count] == '%' && (format[count + 1] == 'd'
+					|| format[count + 1] == 'i'))
 		{
 			count++;
 			x += printInteger(listedPrint);
