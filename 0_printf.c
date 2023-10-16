@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * handleCase -  handle cases for persentage..
+ * percent_print -  handle cases for persentage..
  *
  * Description: a function that prints listed input and check spesial cases.
  * @listedPrint: list of character need to print
