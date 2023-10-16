@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * percent_print -  handle cases for persentage..
  *
@@ -7,6 +8,7 @@
  *
  * Return: number of printed digits, -1 if nothing printed.
  **/
+
 int percent_print(va_list listedPrint)
 {
 }
@@ -38,7 +40,8 @@ int _printf(const char *format, ...)
 			count++;
 			x += printString(listedPrint);
 		}
-		if (format[count] == '%' && (format[count + 1] == 'd' || format[count + 1] == 'i'))
+		if (format[count] == '%' && (format[count + 1] == 'd'
+					|| format[count + 1] == 'i'))
 		{
 			count++;
 			x += printInteger(listedPrint);
