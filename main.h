@@ -8,6 +8,7 @@
 #include <limits.h>
 #define NULL_STRING "(null)"
 #define NUL '\0'
+
 int _putchar(char c);
 int _printf(const char *format, ...);
 int printInteger(va_list listedPrint);

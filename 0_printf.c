@@ -1,19 +1,6 @@
 #include "main.h"
 
 /**
- * percent_print -  handle cases for persentage..
- *
- * Description: a function that prints listed input and check spesial cases.
- * @listedPrint: list of character need to print
- *
- * Return: number of printed digits, -1 if nothing printed.
- **/
-
-int percent_print(va_list listedPrint)
-{
-}
-
-/**
 * _printf - Function that produces output according to a format
 * @format:  A pointer parameter to input format
 *
@@ -33,12 +20,12 @@ int _printf(const char *format, ...)
 		if (format[count] == '%' && format[count + 1] == 'c')
 		{
 			count++;
-			x += printChar(listedPrint);
+			x += print_char(listedPrint);
 		}
 		if (format[count] == '%' && format[count + 1] == 's')
 		{
 			count++;
-			x += printString(listedPrint);
+			x += print_string(listedPrint);
 		}
 		if (format[count] == '%' && (format[count + 1] == 'd'
 					|| format[count + 1] == 'i'))
