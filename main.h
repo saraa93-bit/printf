@@ -13,5 +13,5 @@ int _printf(const char *format, ...);
 int printInteger(va_list listedPrint);
 int print_string(va_list listedPrint);
 int print_char(va_list listedPrint);
-int percent_print(va_list listedPrint);
+int percent_print(va_list listedPrint);
 #endif
