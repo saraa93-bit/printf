@@ -2,8 +2,8 @@
 
 /**
 * print_string - a function that Prints a string
+* @listedPrint: list of arguments will be printed
 *
-* @listedprint: list of arguments will be printed
 * Return: number of printed argument, -1 if nothing printed
 */
 
@@ -28,7 +28,7 @@ int print_string(va_list listedPrint)
 * print_char - a function that Prints a charectar
 *
 * Description: Prints a  charectar.
-* @listedprint: the arguments list
+* @listedPrint: the arguments list
 * Return: number of characters printed.
 */
 
