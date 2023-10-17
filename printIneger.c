@@ -1,22 +1,18 @@
 #include "main.h"
 
 /**
- * printInteger - print Numbers passed from listedPrint.
- *
- * Description: a function that prints decimal & integer numbers.
- * @listedPrint: list of numbers which will be printed.
- *
- * Return: number of printed digits, -1 if nothing printed.
- **/
+* printInteger - print Numbers passed from listedPrint.
+*
+* Description: a function that prints decimal & integer numbers.
+* @listedPrint: list of numbers which will be printed.
+*
+* Return: number of printed digits, -1 if nothing printed.
+*/
 int printInteger(va_list listedPrint)
 {
 	int endDigit, NumOfDigits = 1, printNumber, remainNumber = 0, count = 0;
 	int c = va_arg(listedPrint, int);
 
-	if (!c)
-	{
-		return (-1);
-	}
 	endDigit = c % 10;
 	if (c < 0)
 	{
