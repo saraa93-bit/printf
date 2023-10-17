@@ -21,10 +21,12 @@ int _printf(const char *format, ...)
 	{
 		return (-1);
 	}
+	va_start(listedPrint, format);
+
 	while (format[i] != '\0')
 	{
 		j = 0;
-		while (j < 5)
+		while (j < 4)
 		{
 			if (format[i] == '%' && format[i + 1] != '\0')
 			{
@@ -32,11 +34,14 @@ int _printf(const char *format, ...)
 				{
 					myFormatChecks[j].printIt(listedPrint);
 				}
+				else if (format[i + 1] == '%')
+					_putchar('%');
 			}
 			else
 				return (-1);
 			j++;
 		}
+		_putchar(format[i]);
 		i++;
 	}
 	va_end(listedPrint);
