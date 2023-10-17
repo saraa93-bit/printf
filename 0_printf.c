@@ -12,8 +12,7 @@ int _printf(const char *format, ...)
 		{"s", print_string},
 		{"d", printInteger},
 		{"i", printInteger},
-		{"%", percent_print}
-
+		{"r", print_rev_str}
 	};
 	int i = 0, j = 0, count = 0;
 	va_list listedPrint;
@@ -32,6 +31,12 @@ int _printf(const char *format, ...)
 				{
 					i = i + 2;
 					count = count + myFormatChecks[j].printIt(listedPrint);
+				}
+				if (format[i + 1] == '%')
+				{
+					_putchar('%');
+					i++;
+					count++;
 				}
 			}
 			j++;
