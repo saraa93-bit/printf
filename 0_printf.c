@@ -19,21 +19,21 @@ int _printf(const char *format, ...)
 	{
 		if (format[count] == '%' && format[count + 1] == 'c')
 		{
-			count++;
+			count = count + 2;
 			x += print_char(listedPrint);
 		}
-		if (format[count] == '%' && format[count + 1] == 's')
+		else if (format[count] == '%' && format[count + 1] == 's')
 		{
-			count++;
+			count = count + 2;
 			x += print_string(listedPrint);
 		}
-		if (format[count] == '%' && (format[count + 1] == 'd'
+		else if (format[count] == '%' && (format[count + 1] == 'd'
 					|| format[count + 1] == 'i'))
 		{
-			count++;
+			count = count + 2;
 			x += printInteger(listedPrint);
 		}
-		if (format[count] == '%' && format[count + 1] == '%')
+		else if (format[count] == '%' && format[count + 1] == '%')
 		{
 			count = count + 2;
 			_putchar('%');

@@ -7,36 +7,21 @@
 * Return: number of printed argument, -1 if nothing printed
 */
 
-int print_string(va_list args)
+int print_string(va_list listedPrint)
 {
 	int a;
 	char *c;
 
-	c = va_arg(args, char *);
+	c = va_arg(listedPrint, char *);
 	if (c == NULL)
 		return (-1);
 	a = 0;
 	while (c[a] != '\0')
+	{
+		_putchar(c[a]);
 		a++;
+	}
 	return (a);
-}
-/**
-* percent_print - a function that Prints a percent %.
-*
-* Description: Prints a percent %.
-* @args: list of argument will be printed
-* Return: the percent % in success, 1 in failure.
-*/
-
-int percent_print(va_list args)
-{
-	int i;
-	char *st;
-
-	if (st[i] == '%')
-		putchar('%');
-	else
-		return (1);
 }
 
 /**
@@ -47,10 +32,11 @@ int percent_print(va_list args)
 * Return: number of characters printed.
 */
 
-int print_char(va_list args)
+int print_char(va_list listedPrint)
 {
-	char *ap;
+	char ap;
 
-	ap = va_arg(args, char *);
+	ap = va_arg(listedPrint, int);
+	_putchar(ap);
 	return (1);
 }
