@@ -9,39 +9,36 @@
 
 int _printf(const char *format, ...)
 {
-	int x, count;
+	int i = 0, j = 0;
 	va_list listedPrint;
-
-	va_start(listedPrint, format);
-	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
-		return (-1);
-	for (count = 0; format[count] != '\0'; count++)
+	myFormat myFormatChecks[] = {
+		{"c", print_char},
+		{"s", print_string},
+		{"d", printInteger},
+		{"i", printInteger}
+	};
+	if (format == NULL || format[0] == '\0')
 	{
-		if (format[count] == '%' && format[count + 1] == 'c')
+		return (-1);
+	}
+	while (format[i] != '\0')
+	{
+		j = 0;
+		while (j < 5)
 		{
-			count = count + 2;
-			x += print_char(listedPrint);
+			if (format[i] == '%' && format[i + 1] != '\0')
+			{
+				if (format[i + 1] == myFormatChecks[j].spsifier[0])
+				{
+					myFormatChecks[j].printIt(listedPrint);
+				}
+			}
+			else
+				return (-1);
+			j++;
 		}
-		else if (format[count] == '%' && format[count + 1] == 's')
-		{
-			count = count + 2;
-			x += print_string(listedPrint);
-		}
-		else if (format[count] == '%' && (format[count + 1] == 'd'
-					|| format[count + 1] == 'i'))
-		{
-			count = count + 2;
-			x += printInteger(listedPrint);
-		}
-		else if (format[count] == '%' && format[count + 1] == '%')
-		{
-			count = count + 2;
-			_putchar('%');
-			x++;
-		}
-		_putchar(format[count]);
-		x++;
+		i++;
 	}
 	va_end(listedPrint);
-	return (x - 1);
+	return (i);
 }
