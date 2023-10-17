@@ -10,18 +10,16 @@
 int _printf(const char *format, ...)
 {
 	myFormat myFormatChecks[] = {
-		{"%c", print_char},
-		{"%s", print_string},
-		{"%d", printInteger},
-		{"%i", printInteger},
-		{"%%", percent_print}
-		{"%r", print_rev_str}
+		{"c", print_char},
+		{"s", print_string},
+		{"d", printInteger},
+		{"i", printInteger}
 	};
 	int i = 0, j = 0;
 	va_list listedPrint;
 
 	va_start(listedPrint, format);
-	if (format[i] == NULL || format[0] == '%' && format[1] == '\0')
+	if (format == NULL || (format[i] == '%' && format[i + 1] == '\0'))
 	{
 		return (-1);
 	}
@@ -29,19 +27,21 @@ int _printf(const char *format, ...)
 	while (format[i] != '\0')
 	{
 		j = 0;
-		while (j < 6)
+		while (j < 4)
 		{
 			if (format[i] == '%' && format[i + 1] != '\0')
 			{
 				if (format[i + 1] == myFormatChecks[j].spsifier[0])
 				{
+					i = i + 2;
 					myFormatChecks[j].printIt(listedPrint);
 				}
-				else if (format[i + 1] == '%')
+				else if (format[i] == '%' && format[i + 1] == '%')
+				{
+					i++;
 					_putchar('%');
+				}
 			}
-			else
-				return (-1);
 			j++;
 		}
 		_putchar(format[i]);
