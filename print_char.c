@@ -14,7 +14,10 @@ int print_string(va_list listedPrint)
 
 	c = va_arg(listedPrint, char *);
 	if (c == NULL)
+	{
 		return (-1);
+	}
+
 	a = 0;
 	while (c[a] != '\0')
 	{
@@ -38,5 +41,21 @@ int print_char(va_list listedPrint)
 
 	ap = va_arg(listedPrint, int);
 	_putchar(ap);
+	return (1);
+}
+
+/**
+* percent_print - a function that Prints a percent %.
+*
+* Description: Prints a percent %.
+* @listedPrint: list of argument will be printed
+* Return: the percent % in success, 1 in failure.
+*/
+
+int percent_print(va_list listedPrint)
+{
+	(void) listedPrint;
+
+	_putchar('%');
 	return (1);
 }

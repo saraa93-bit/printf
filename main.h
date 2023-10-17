@@ -26,6 +26,7 @@ int print_char(va_list listedPrint); /* Handle format of character */
 int print_string(va_list listedPrint); /* Handle format of string */
 int printInteger(va_list listedPrint); /* Handle format of integer */
 int _putchar(char c); /* print a charectar to output*/
+int percent_print(va_list listedPrint);
 int print_rev_str(va_list listedPrint); /* Handle format of reverse string */
 
 #endif 
