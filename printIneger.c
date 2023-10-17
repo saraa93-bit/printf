@@ -38,7 +38,7 @@ int printInteger(va_list listedPrint)
 			remainNumber = remainNumber / 10;
 		}
 		remainNumber = c;
-		for ( ; NumOfDigits > 0; count++)
+		while (NumOfDigits > 0)
 		{
 			printNumber = remainNumber / NumOfDigits;
 			remainNumber = remainNumber - (printNumber * NumOfDigits);
@@ -48,5 +48,5 @@ int printInteger(va_list listedPrint)
 		}
 	}
 	_putchar(endDigit + '0');
-	return (count);
+	return (count + 1);
 }
