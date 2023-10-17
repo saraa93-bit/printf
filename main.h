@@ -21,11 +21,10 @@ typedef struct myFormatCheck
         int (*printIt)(char *, va_list);
 } myFormat;
 
-int _printf(const char *format, ...);
-int print_char(va_list listedPrint);
-int print_string(va_list listedPrint);
-int printInteger(va_list listedPrint);
-int _putchar(char c);
-int percent_print(va_list listedPrint);
+int _printf(const char *format, ...); /* Handle various format specifiers */
+int print_char(va_list listedPrint); /* Handle format of character */
+int print_string(va_list listedPrint); /* Handle format of string */
+int printInteger(va_list listedPrint); /* Handle format of integer */
+int _putchar(char c); /* print a charectar to output*/
 
 #endif 
