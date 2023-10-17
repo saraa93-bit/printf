@@ -8,6 +8,19 @@
 #include <unistd.h>
 #include <limits.h>
 
+/**
+ * struct myFormatCheck - struct format
+ * @spsifier: input formate
+ * @printIt: a pointer to function
+ *
+ * Description: format struct
+ */
+typedef struct myFormatCheck
+{
+        char *spsifier;
+        int (*printIt)(char *, va_list);
+} myFormat;
+
 int _printf(const char *format, ...);
 int print_char(va_list listedPrint);
 int print_string(va_list listedPrint);
