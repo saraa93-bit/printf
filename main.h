@@ -18,7 +18,7 @@
 typedef struct myFormatCheck
 {
         char *spsifier;
-        int (*printIt)(char *, va_list);
+        int (*printIt)(va_list);
 } myFormat;
 
 int _printf(const char *format, ...); /* Handle various format specifiers */
