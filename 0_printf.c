@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 					count += myFormatChecks[j].printIt(listedPrint);
 				}
 			}
-			j--;
+			j++;
 		}
 		_putchar(format[i]);
 		count++;
