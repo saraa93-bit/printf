@@ -23,8 +23,8 @@ int _printf(const char *format, ...)
 		return (-1);
 	while (format[i] != '\0')
 	{
-		j = 0;
-		while (j < 6)
+		j = 5;
+		while (j >= 0)
 		{
 			if (format[i] == '%' && format[i + 1] != '\0')
 			{
