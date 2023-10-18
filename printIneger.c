@@ -44,5 +44,5 @@ int printInteger(va_list listedPrint)
 		}
 	}
 	_putchar(endDigit + '0');
-	return (count + 1);
+	return (count);
 }
