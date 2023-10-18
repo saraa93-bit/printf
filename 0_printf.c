@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	myFormat myFormatChecks[] = {
 		{"c", print_char},
 		{"s", print_string},
-		{"d", printInteger},
+		{"d", print_number},
 		{"i", printInteger},
 		{"r", print_rev_str}
 	};

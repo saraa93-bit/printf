@@ -29,5 +29,6 @@ int printInteger(va_list listedPrint);
 int _putchar(char c);
 int percent_print(va_list listedPrint);
 int print_rev_str(va_list listedPrint);
+int print_number(va_list listedPrint);
 
 #endif
