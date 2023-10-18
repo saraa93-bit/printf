@@ -6,7 +6,7 @@
 * Description: a function that prints decimal & integer numbers.
 * @listedPrint: list of numbers which will be printed.
 *
-* Return: number of printed digits, -1 if nothing printed.
+* Return: number of printed digits, -1 if no printed numbers.
 */
 int printInteger(va_list listedPrint)
 {
