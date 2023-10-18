@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 		{"d", print_number},
 		{"i", printInteger},
 		{"r", print_rev_str},
-		{"%", percent_print} 
+		{"%", percent_print}
 	};
 	int i = 0, j = 0, count = 0;
 	va_list listedPrint;
