@@ -31,10 +31,10 @@ int _printf(const char *format, ...)
 				if (format[i + 1] == myFormatChecks[j].spsifier[0])
 				{
 					i = i + 2;
-					count = count + myFormatChecks[j].printIt(listedPrint);
+					count += myFormatChecks[j].printIt(listedPrint);
 				}
 			}
-			j++;
+			j--;
 		}
 		_putchar(format[i]);
 		count++;
